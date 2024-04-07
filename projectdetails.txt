@@ -1,0 +1,12 @@
+library management system 
+using switch function 
+enter 1 adduser ----added
+enter 2 rentbooks ----shld modify a little
+enter 3 addbooks----- addded
+
+function 1 add user 
+structure user ->name ->id
+create file and 
+FILE *ul = fopen("userlist.txt","ab+")  // appending the 
+if pf!=NULL
+if wanna add more users repeat the same function
