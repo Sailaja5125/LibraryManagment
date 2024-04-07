@@ -14,28 +14,6 @@ struct book
     char author_name[100];
     int quantity;
 } b;
-int searchUser(){
-    char c[100];
-    FILE *ul = fopen("userlist.txt", "a+");
-    if (ul=NULL)
-    {
-        printf("cannot open the file");
-    }
-    else
-    {
-        while (fgets(c,100,ul)!=NULL)
-        {
-        
-            printf("%s",c);
-        
-        }
-        
-    }
-    fclose(ul);
-    return 0;
-
-}
-
 void addUser()
 {
     int no_users;
@@ -116,24 +94,24 @@ void addBooks()
 int main()
 {
     // // switch statement
-    // int Entry;
-    // printf("......................Welcome to Library........................\n");
-    // printf("To add user press 1\n To rent a book press 2\n To addbooks press 3\n");
-    // scanf("%d",&Entry);
-    // switch (Entry)
-    // {
-    // case 1:
-    //    addUser();
-    //     break;
-    // case 2:
-    //    rentuser();
-    //     break;
-    // case 3:
-    //    addBooks();
-    //    break; 
-    // default: printf("Thankyou !!");
-    //     break;
-    // }
- searchUser();
+    int Entry;
+    printf("......................Welcome to Library........................\n");
+    printf("To add user press 1\n To rent a book press 2\n To addbooks press 3\n");
+    scanf("%d",&Entry);
+    switch (Entry)
+    {
+    case 1:
+       addUser();
+        break;
+    case 2:
+       rentuser();
+        break;
+    case 3:
+       addBooks();
+       break; 
+    default: printf("Thankyou !!");
+        break;
+    }
+ 
     return 0;
 }
