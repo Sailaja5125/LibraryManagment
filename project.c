@@ -1,19 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
 #include <string.h>
+// user data
 struct user
 {
     char name[40];
     int id;
     double phone_no;
 } u;
+// book data
 struct book
 {
     char book_name[100];
     char author_name[100];
     int quantity;
 } b;
+
+// function to add users
 void addUser()
 {
     int no_users;
@@ -27,11 +30,15 @@ void addUser()
         {
             printf("enter the name\n");
             scanf("%s", u.name);
+            
             printf("enter id \n");
             scanf("%d", &u.id);
+            
             printf("enter Phone number \n");
             scanf("%lf", &u.phone_no);
+            // below code writes the given details in userlist.txt file
             fprintf(ul, "%s\t %d\t %.lf\n", u.name, u.id ,u.phone_no);
+            
             printf("Users added successfully\n");
         }
         else
@@ -42,6 +49,7 @@ void addUser()
         fclose(ul);
     }
 }
+// renting the book to the users
 void rentuser()
 { 
     char date[10];
